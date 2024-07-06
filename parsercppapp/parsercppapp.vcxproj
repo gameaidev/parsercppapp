@@ -182,7 +182,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="parser.cpp" />
     <ClCompile Include="parsercppapp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
