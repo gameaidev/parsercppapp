@@ -186,7 +186,10 @@
     <ClCompile Include="parsercppapp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FileIoHandler.h" />
+    <ClInclude Include="MyResource.h" />
     <ClInclude Include="parser.h" />
+    <ClInclude Include="Program.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
