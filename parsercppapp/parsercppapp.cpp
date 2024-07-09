@@ -19,12 +19,13 @@ int main() {
         }
         delete doc; // Since release() was called, we need to delete the raw pointer
 
-        git_demo::Program::Main();
-
     } catch (const std::runtime_error& ex) {
         std::cout << "Runtime error: " << ex.what() << std::endl;
     } catch (const std::exception& exp) {
         std::cout << "Catch all errors: " << exp.what() << std::endl;
     }
+
+    git_demo::Program::Main();
+
     return 0;
 }
