@@ -3,7 +3,12 @@
 #include <sstream>
 
 #include "parser.h"
-#include "Program.h"
+// #include "Program.h"
+
+// Declare the exported function
+namespace git_demo {
+    PARSER_API void RunProgram();
+}
 
 int main() {
     // Example usage of the parser class
@@ -25,7 +30,7 @@ int main() {
         std::cout << "Catch all errors: " << exp.what() << std::endl;
     }
 
-    git_demo::Program::Main();
+    git_demo::RunProgram();
 
     return 0;
 }

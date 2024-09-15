@@ -5,13 +5,14 @@
 #ifndef FILEIOHANDLER_H
 #define FILEIOHANDLER_H
 
+#include "ParserLibraryExports.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 
 namespace git_demo {
-    class FileIoHandler {
+    class PARSER_API FileIoHandler {
     private:
         std::string input_path_;
         std::vector<std::string> user_details_;

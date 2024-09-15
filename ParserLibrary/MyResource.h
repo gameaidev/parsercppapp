@@ -5,6 +5,7 @@
 #ifndef MYRESOURCE_H
 #define MYRESOURCE_H
 
+#include "ParserLibraryExports.h"
 #include <iostream>
 #include <memory>
 #include <stdexcept>
@@ -12,7 +13,7 @@
 
 namespace git_demo {
 
-    class MyResource {
+    class PARSER_API MyResource {
     private:
         bool disposed_;
         void* unmanaged_resource_;

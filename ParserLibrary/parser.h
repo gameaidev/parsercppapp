@@ -96,7 +96,7 @@ namespace xml {
 }
 
 template<typename C>
-class basic_parser {
+class PARSER_API basic_parser {
 private:
     using char_type = C;
     using node_type = dom::basic_node<char_type>;

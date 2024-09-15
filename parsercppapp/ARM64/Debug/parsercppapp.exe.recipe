@@ -2,6 +2,9 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+      <FullPath>C:\Users\jlefx\source\repos\parsercppapp\ARM64\Debug\ParserLibrary.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\Users\jlefx\source\repos\parsercppapp\ARM64\Debug\parsercppapp.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
