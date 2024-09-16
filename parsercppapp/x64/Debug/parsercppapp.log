@@ -1,1 +1,3 @@
-﻿
+﻿cl : command line warning D9025: overriding '/sdl' with '/GS-'
+  parsercppapp.cpp
+  parsercppapp.vcxproj -> E:\source\parsercppapp\x64\Debug\parsercppapp.exe
