@@ -1,1 +1,8 @@
-﻿
+﻿  parsercppapp.cpp
+C:\Users\jlefx\source\repos\parsercppapp\ParserLibrary\Program.h(53,33): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'parsercppapp.cpp')
+  
+C:\Users\jlefx\source\repos\parsercppapp\ParserLibrary\Program.h(79,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'parsercppapp.cpp')
+  
+  parsercppapp.vcxproj -> C:\Users\jlefx\source\repos\parsercppapp\ARM64\Debug\parsercppapp.exe
