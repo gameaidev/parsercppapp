@@ -10,12 +10,21 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <sstream>
 
 namespace git_demo {
+
+    struct UserDetail {
+        std::string name;
+        int age;
+        std::string filePath;
+        UserDetail() : name(""), age(0), filePath("") {}
+    };
+
     class PARSER_API FileIoHandler {
     private:
         std::string input_path_;
-        std::vector<std::string> user_details_;
+        std::vector<UserDetail> user_details_;
 
     public:
         FileIoHandler(const std::string& inputPath) : input_path_(inputPath) {}
@@ -31,9 +40,18 @@ namespace git_demo {
 
                 std::string line;
                 while (std::getline(file, line)) {
-                    user_details_.push_back(line);
+                    std::istringstream iss(line);
+                    UserDetail user;
+                    if (iss >> user.name >> user.age >> user.filePath)
+                    {
+                        user_details_.push_back(user);
+                    }
+                    else
+                    {
+                        std::cerr << "Error parsing line: " << line << std::endl;
+                    }
                 }
-
+ 
                 file.close();
                 std::cout << "Read completed successfully." << std::endl;
             }
@@ -44,9 +62,9 @@ namespace git_demo {
 
         void WriteDataToFile() {
             if (!user_details_.empty()) {
-                std::string username = user_details_[0];
-                std::string age = user_details_[1];
-                std::string outputPath = user_details_[2];
+                std::string username = user_details_[0].name;
+                int age = user_details_[0].age;
+                std::string outputPath = user_details_[0].filePath;
 
                 try {
                     std::cout << "Writing welcome message to " << outputPath << "..." << std::endl;

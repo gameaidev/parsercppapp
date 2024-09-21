@@ -18,12 +18,12 @@ int main() {
         auto doc = p.parse(input_stream);
         if (doc) {
             std::cout << "Document parsed successfully with encoding: " << doc->get_encoding() << std::endl;
+            delete doc; // Since release() was called, we need to delete the raw pointer
         }
         else {
             std::cout << "Failed to parse document" << std::endl;
         }
-        delete doc; // Since release() was called, we need to delete the raw pointer
-
+ 
     } catch (const std::runtime_error& ex) {
         std::cout << "Runtime error: " << ex.what() << std::endl;
     } catch (const std::exception& exp) {

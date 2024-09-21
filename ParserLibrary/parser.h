@@ -162,4 +162,7 @@ public:
 
 using parser = basic_parser<char>;
 
+// Add this line to export the instantiation
+extern template class PARSER_API basic_parser<char>;
+
 #endif //PARSER_H
